@@ -27,7 +27,7 @@ class PageController extends Controller
     public function getLoaiSp($type){
     	$sp_theoloai = Product::where('id_type',$type)->get();
     	$loai_sp = ProductType::all();
-    	$sp_khac = Product::where('id_type','<>',$type)->paginate(3);
+    	$sp_khac = Product::where('id_type','<>',$type)->get();
     	$ten_sp = ProductType::where('id',$type)->first();
     	return view('pages.loai-sanpham',compact('sp_theoloai','loai_sp','sp_khac','ten_sp'));
     }

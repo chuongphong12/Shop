@@ -90,15 +90,18 @@
 
 						<div class="space50">&nbsp;</div>
 
-						<div class="beta-products-list">
+						
+				</div> <!-- end section with sidebar and main content -->
+					<div class="beta-products-list">
 							<h4>Related</h4>
 							<div class="beta-products-details">
 								<p class="pull-left">Found {{count($sp_khac)}} products</p>
 								<div class="clearfix"></div>
 							</div>
 							<div class="row">
+								<div class="owl-carousel owl-theme">
 								@foreach($sp_khac as $spk)
-								<div class="col-sm-4">
+								<div class="col-sm-12">
 									<div class="single-item">
 										<div class="single-item-header">
 											<a href="{{route('sanpham',$spk->id)}}"><img src="sources/image/product/{{$spk->image}}" alt="" height="250px"></a>
@@ -122,12 +125,9 @@
 									</div>
 								</div>
 								@endforeach
-							<div class="space40">&nbsp;</div>
-							<div class="row">{{$sp_khac->links()}}</div>
+							</div>
 						</div> <!-- .beta-products-list -->
 					</div>
-				</div> <!-- end section with sidebar and main content -->
-
 
 			</div> <!-- .main-content -->
 		</div> <!-- #content -->
