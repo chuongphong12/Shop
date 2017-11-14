@@ -89,6 +89,7 @@ class PageController extends Controller
         $bill->total = $cart->totalPrice;
         $bill->payment = $req->payment_method;
         $bill->note = $req->notes;
+        $bill->status = 0;
         $bill->save();
 
         foreach ($cart->items as $key => $value) {

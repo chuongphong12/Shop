@@ -80,7 +80,7 @@
 						<h4>Related Products</h4>
 
 						<div class="row">
-							<div class="owl-carousel owl-theme">
+							<div class="owl-carousel1 owl-theme">
 							@foreach($related as $re)
 							<div class="col-sm-12">
 								<div class="single-item">
@@ -118,18 +118,20 @@
 						<h3 class="widget-title">Best Sellers</h3>
 						<div class="widget-body">
 							<div class="beta-sales beta-lists">
-								<div class="owl-carousel owl-theme">
+								<div class="owl-carousel2 owl-theme">
 								@foreach($top_product as $top)
 								<div class="media beta-sales-item">
 									<a class="pull-left" href="{{route('sanpham',$top->id)}}"><img src="sources/image/product/{{$top->image}}" alt=""></a>
-									<div class="media-body">
-										{{$top->name}}</br>
+									<div class="single-item-body">
+										<p class="single-item-title">{{$top->name}}</br>
+										<p class="single-item-price">
 										@if($top->promotion_price==0)
 										<span class="flash-sale">{{number_format($top->unit_price)}}</span>
 									@else
 										<span class="flash-del">{{number_format($top->unit_price)}}</span>
 										<span class="flash-sale">{{number_format($top->promotion_price)}}</span>
 									@endif
+										</p>
 									</div>
 								</div>
 								@endforeach
@@ -141,18 +143,20 @@
 						<h3 class="widget-title">New Products</h3>
 						<div class="widget-body">
 							<div class="beta-sales beta-lists">
-								<div class="owl-carousel owl-theme">
+								<div class="owl-carousel2 owl-theme">
 								@foreach($new_product as $new)
 								<div class="media beta-sales-item">
 									<a class="pull-left" href="{{route('sanpham',$new->id)}}"><img src="sources/image/product/{{$new->image}}" alt=""></a>
-									<div class="media-body">
-										{{$new->name}}</br>
+									<div class="single-item-body">
+										<p class="single-item-title">{{$new->name}}</br>
+										<p class="single-item-price">
 										@if($new->promotion_price==0)
 										<span class="flash-sale">{{number_format($new->unit_price)}}</span>
 									@else
 										<span class="flash-del">{{number_format($new->unit_price)}}</span>
 										<span class="flash-sale">{{number_format($new->promotion_price)}}</span>
 									@endif
+									</p>
 									</div>
 								</div>
 								@endforeach

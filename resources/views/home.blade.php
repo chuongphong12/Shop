@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="sources/assets/dest/css/animate.css">
 	<link rel="stylesheet" title="style" href="sources/assets/dest/css/huong-style.css">
 	<link rel="stylesheet" href="sources/assets/dest/css/owl.carousel.css">
+	<link rel="stylesheet" href="sources/assets/dest/css/owl.carousel2.css">
 	<link rel="stylesheet" href="sources/assets/dest/css/owl.theme.default.css">
 </head>
 <body>
